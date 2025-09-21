@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/harsh/OneDrive/Desktop/login.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Samskruti College Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+        }
+        h1 {
+            color: red;
+            font-family: 'Trebuchet MS', sans-serif;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Samskruti College Login</h1>
+        <input type="text" id="username" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+        <div id="error" class="error"></div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorDiv = document.getElementById("error");
+
+            if(username === "harshini" && password === "0000") {
+                // Redirect to your Lovable portfolio link
+                window.location.href = "https://harshini-data-space.lovable.app";
+            } else {
+                errorDiv.textContent = "Invalid Password";
+            }
+        }
+    </script>
+
+
+</body></html>
